@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TARJETA REDES SOCIALES V7</title>
+        <title>CATOLOGO V2</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 <style>
 /*ESTILO DE FONDO ANIMADO*/
 :root {
-  --gradient: linear-gradient(-45deg,white, blue,black,blue,white );
+  --gradient: linear-gradient(-45deg,white, green,black,green,white );
 }
 
 
@@ -38,7 +38,7 @@ body {
 .card {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 850px;
     border-radius: 5px;
     overflow: hidden;
     transition: .5s;
@@ -123,22 +123,11 @@ body {
     object-fit: cover;
 }
 
-Img:hover {
-    
-background-image: var(--gradiente);
-  
-    --gradiente: linear-gradient(to top,blue,white
-    );
-     box-shadow: 0 5px 10px rgba(0,0,0,1);
-    transform: translateY(-20px);
-}
-
-
 
 
 /*contenedor del texto*/
 .card .description {
-    height: 200px;
+    height: 650px;
     padding: 40px 20px 20px 20px;
     border-bottom: white solid 1px ;
     text-align: center;
@@ -194,12 +183,157 @@ animation: animate 10s infinite linear;
     
 background-image: var(--gradiente);
   
-    --gradiente: linear-gradient(to top,blue ,black
+    --gradiente: linear-gradient(to top,green,black
     );
      box-shadow: 0 5px 5px rgba(0,0,0,1);
     transform: translateY(-10px);
 }
 
+
+/*codigo de fondo animado*/
+  }
+  @-webkit-keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+
+/*slide*/
+   #loader {
+    
+        position: absolute;
+    
+      }
+      #loader:after {
+   
+        position: absolute;
+  
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      #box {
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        top: 150px;
+        left: 50%;
+        width: 400px;
+       height:100px;
+    
+      }
+      .img-con {
+        position: absolute;
+      }
+      .img-con img {
+        height: 1px;
+        width: 1px;
+      }
+      .wrapper {
+      
+        position: relative;
+        top:100px;
+        height:0%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-radius: 0.6em;
+        -webkit-box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+                box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+      }
+      .testimonial-container {
+        width: 85%;
+        height: 100%;
+        position: relative;
+        margin: auto;
+        padding: 1.8em 1.2em;
+      }
+      .testimonial-container p {
+        color: #8c8c90;
+        text-align: center;
+        font-size: 25px;
+        line-height: 2em;
+        letter-spacing: 0.05em;
+      }
+      .testimonial-container img {
+        display: block;
+        margin: 1.8em auto 1.25em auto;
+        border-radius: 2%;
+        width:270px;
+      }
+      .testimonial-container h3 {
+        color:red;
+        font-size: 1em;
+        text-align: center;
+      }
+      .testimonial-container h6 {
+        color: #bcc4da;
+        font-size: 0.9em;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+        text-align: center;
+      }
+      .wrapper button {
+        font-size: 1.8em;
+        
+        color:black;
+        height: 2.2em;
+        width: 2.2em;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+   
+        border: none;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+                box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+      button#next {
+        right: -1.1em;
+        position:absolute;
+        left:200px;
+        top:1050px;
+      }
+      button#prev {
+        left: -1.1em;
+        position:absolute;
+        left:60px;
+        top:1050px;
+      }
+   
 
 </style>
     </head>
@@ -214,16 +348,30 @@ background-image: var(--gradiente);
             
         
         <div class="description">
-            <h2 class="text-animation">TU NOMBRE</h2>
-            <H4>TU PUESTO O TU NEGOCIO</H4>
-            <p>BREVE DESCRIPCIÓN DE LO QUE HACES <br />PRECIO $1400</p>
+            <h2 class="text-animation">CATALOGO V2 <br /> PRECIO $1100</h2>
+           <div id="loader"></div>
+    <div id="box">
+      <div class="img-con">
+        
+      </div>
+      <div class="wrapper">
+        <div class="testimonial-container" id="testimonial-container">
+          <div id="testimonial1" class="active">
+            <img src="" />
+          </div>
+        </div>
+        <button id="prev" onclick="prev()">&lt;</button>
+        <button id="next" onclick="next()">&gt;</button>
+      </div>
+      
+    </div>
         </div>
         
         <div class="contact"
         >
         <a href="tel: 3312381872"><i class="fa fa-phone"></i></a>
 
-        <a href="https://wa.me/message/2HRXBKVKB7UGJ1
+        <a href="https://wa.me/qr/K3HPFDZLSFINP1
         "><i class="fa fa-whatsapp"></i></a>
         
         <a href="https://www.facebook.com/Digital-World-100310082725612/
@@ -244,11 +392,66 @@ background-image: var(--gradiente);
 "><i class="fa fa-street-view
 "></i></a>
 
-        
+
+
         
         
         
     </div>
+    
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("box").style.display = "block";
+      });
+      const testimonials = [
+        {
+          
+          image: "https://i.ibb.co/WFdxDgh/images-1.jpg",
+          testimonial:
+            "PRODUCTO 1 <br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+        },
+        {
+          
+          image: "https://i.ibb.co/3vgMwx8/images-2.jpg",
+          testimonial:
+            "PRODUCTO 2<br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+        },
+        {
+          
+          image: "https://i.ibb.co/M86JhM5/images.png",
+          testimonial:
+            "PRODUCTO 3<br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+        },
+       
+      ];
+      let i = 0; // current slide
+      let j = testimonials.length; // total slides
+      let testimonialContainer = document.getElementById(
+        "testimonial-container"
+      );
+      function next() {
+        i = (j + i + 1) % j;
+        displayTestimonial();
+      }
+
+      function prev() {
+        i = (j + i - 1) % j;
+        displayTestimonial();
+      }
+      let displayTestimonial = () => {
+        testimonialContainer.innerHTML = `
+        <p>${testimonials[i].testimonial}</p>
+         <img src=${testimonials[i].image}></img>
+        
+        `;
+      };
+      window.onload = displayTestimonial;
+    </script>
+    
+    
+
+        
         
     </body>
 </html>
