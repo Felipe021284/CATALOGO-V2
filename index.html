@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CATOLOGO V2</title>
+        <title>CATALOGO V2</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!--link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@800&display=swap" rel="stylesheet">
+
+
+
+
+   
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 
 <style>
 /*ESTILO DE FONDO ANIMADO*/
 :root {
-  --gradient: linear-gradient(-45deg,white, green,black,green,white );
+  --gradient: linear-gradient(-45deg,white, purple,black,purple,white );
 }
 
 
@@ -31,14 +45,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #efefef;
+    background:black;
     flex-wrap: wrap;
 }
 /*contenedor principal*/
 .card {
     position: relative;
-    width: 300px;
-    height: 850px;
+    width: 350px;
+    height: 830px;
     border-radius: 5px;
     overflow: hidden;
     transition: .5s;
@@ -92,7 +106,7 @@ body {
 
 .card .head .circle {
     position: absolute;
-    width: 300px;
+    width: 320px;
     height: 300px;
     border-radius: 50%;
     background-image: url("https://i.ibb.co/5LKMwm8/images-2.png"); background-size: 50px;
@@ -123,6 +137,17 @@ body {
     object-fit: cover;
 }
 
+Img:hover {
+    
+background-image: var(--gradiente);
+  
+    --gradiente: linear-gradient(to top,purple,white
+    );
+     box-shadow: 0 5px 10px rgba(0,0,0,1);
+    transform: translateY(-20px);
+}
+
+
 
 
 /*contenedor del texto*/
@@ -133,7 +158,7 @@ body {
     text-align: center;
 }
 
-.card .description h2,h4,p,i{
+.card .description h2,h4,p,i,button{
 animation: animate 10s infinite linear;
 }
 @keyframes animate
@@ -183,13 +208,39 @@ animation: animate 10s infinite linear;
     
 background-image: var(--gradiente);
   
-    --gradiente: linear-gradient(to top,green,black
+    --gradiente: linear-gradient(to top,purple,black
     );
      box-shadow: 0 5px 5px rgba(0,0,0,1);
     transform: translateY(-10px);
 }
 
+/*CATALOGO
 
+.CATALOGO{
+  position: relative;
+  left:65px;
+ display: center;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+  Margin:10px;
+  width: 150px;
+  height:40px;
+  Padding:5px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 1px white solid;
+  box-shadow:0px 0px 10px 1px white;
+                  0px 0px 10px 5px white;
+  text-shadow: -2px 1px purple;
+  
+  min-height: 30px;
+  background-size: 300%;
+  background-image: var(--gradient);
+  -webkit-animation: bg-animation 20s infinite;
+          animation: bg-animation 20s infinite;
+          */
+  
 /*codigo de fondo animado*/
   }
   @-webkit-keyframes bg-animation {
@@ -217,16 +268,35 @@ background-image: var(--gradiente);
 }
 
 
-/*slide*/
-   #loader {
-    
+
+
+/*slider*/
+
+    #loader {
+       /* background-color: #ffffff;*/
+        height: 15em;
+        width: 15em;
         position: absolute;
-    
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        display: -ms-grid;
+        display: grid;
+        place-items: center;
+        border-radius: 5px;
       }
       #loader:after {
-   
+        content: "";
         position: absolute;
-  
+        height: 11em;
+        width: 11em;
+        
+    /*  border: 0.9em solid red;
+        border-top-color:black;
+        border-radius: 50%;*/
+        
         -webkit-animation: spin 1s linear infinite;
         animation: spin 1s linear infinite;
       }
@@ -242,16 +312,19 @@ background-image: var(--gradiente);
           transform: rotate(360deg);
         }
       }
+      
+      
       #box {
         position: absolute;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-        top: 150px;
+        top: 68%;
         left: 50%;
-        width: 400px;
-       height:100px;
-    
+        width: 80vw;
+        max-width: 41em;
+        min-height: 26em;
+        display: none;
       }
       .img-con {
         position: absolute;
@@ -260,11 +333,10 @@ background-image: var(--gradiente);
         height: 1px;
         width: 1px;
       }
-      .wrapper {
-      
+      .uno {
+        background-color: rgba(255,255, 255, .1);
+        ;
         position: relative;
-        top:100px;
-        height:0%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -272,6 +344,35 @@ background-image: var(--gradiente);
         -webkit-box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
                 box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
       }
+      
+       .dos {
+        background-color: rgba(255,255, 255, .1);
+        ;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-radius: 0.6em;
+        -webkit-box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+                box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+      }
+      
+      
+       .wrapper{
+        background-color: rgba(255,255, 255, .1);
+        ;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-radius: 0.6em;
+        -webkit-box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+                box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+      }
+      
+      
+      
+      
       .testimonial-container {
         width: 85%;
         height: 100%;
@@ -282,21 +383,41 @@ background-image: var(--gradiente);
       .testimonial-container p {
         color: #8c8c90;
         text-align: center;
-        font-size: 25px;
+        font-size:20px;
         line-height: 2em;
         letter-spacing: 0.05em;
       }
       .testimonial-container img {
         display: block;
         margin: 1.8em auto 1.25em auto;
-        border-radius: 2%;
-        width:270px;
+        border-radius: 50%;
+        width:210px;
       }
-      .testimonial-container h3 {
-        color:red;
-        font-size: 1em;
+      .testimonial-container h1 {
+        
+       
         text-align: center;
-      }
+        animation: animate 10s infinite linear;
+}
+@keyframes animate
+{
+    0%,100%{
+        color:aqua;
+    }
+    25%{
+        color: deeppink;
+    }
+    50%{
+        color:deepskyblue;
+    }
+    75%{
+        color: white;
+    }
+}
+
+        
+        
+      
       .testimonial-container h6 {
         color: #bcc4da;
         font-size: 0.9em;
@@ -304,36 +425,70 @@ background-image: var(--gradiente);
         font-weight: 400;
         text-align: center;
       }
-      .wrapper button {
+      .uno button  {
         font-size: 1.8em;
-        
-        color:black;
+       /* color: #0a69ed;*/
         height: 2.2em;
         width: 2.2em;
         position: absolute;
+        left:0px;
         margin: auto;
         top: 0;
         bottom: 0;
-   
+        background-color: rgba(255,255, 255, .1);
+        ;
         border: none;
         border-radius: 50%;
         -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
                 box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
         cursor: pointer;
       }
+        .dos button  {
+        font-size: 1.8em;
+       /* color: #0a69ed;*/
+        height: 2.2em;
+        width: 2.2em;
+        position: absolute;
+        right:0px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255,255, 255, .1);
+        ;
+        border: none;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+                box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+      
+      /*
       button#next {
-        right: -1.1em;
-        position:absolute;
-        left:200px;
-        top:1050px;
+         top:-550px;
+        right:-10px;
       }
       button#prev {
-        left: -1.1em;
-        position:absolute;
-        left:60px;
-        top:1050px;
+        top:-550px;
+        right:243px;
+      }*/
+      a {
+        position: relative;
+        display: block;
+     /*   background-color: #ffffff;*/
+        color: #0a69ed;
+        text-decoration: none;
+       /* font-size: 1.2em;*/
+        font-weight: 600;
+        text-align: center;
+        padding: 0.9em 0;
+        border-radius: 0.3em;
+        margin-top: 30px;
       }
-   
+      @media screen and (max-width: 650px) {
+        .wrapper {
+          font-size: 14px;
+        }
+      }
 
 </style>
     </head>
@@ -348,11 +503,33 @@ background-image: var(--gradiente);
             
         
         <div class="description">
-            <h2 class="text-animation">CATALOGO V2 <br /> PRECIO $1100</h2>
-           <div id="loader"></div>
+            <h2 class="text-animation">CATALOGO V2</h2><h2>PRECIO $500</h2> 
+            <!--H4>
+                TARJETA ULTIMATE
+            </H4>
+            <H4>TU PUESTO O TU NEGOCIO</H4>
+            <p>BREVE DESCRIPCIÓN DE LO QUE HACES <br />PRECIO $500</p-->
+            
+            <div class="uno">
+            <button id="prev" onclick="prev()">&lt;</button>
+        
+        </div>
+        
+        <div class="dos">
+        
+        <button id="next" onclick="next()">&gt;</button>
+        </div>
+            
+        </div>
+        
+        <!-- inicio del slider -->
+        <div id="loader"></div>
     <div id="box">
       <div class="img-con">
-        
+        <!--img src="https://i.postimg.cc/gJDkZrNn/profile-image-1.png" />
+        <img src="https://i.postimg.cc/8kZzkJ7Y/profile-image-2.png" />
+        <img src="https://i.postimg.cc/90gmLK32/profile-image-3.png" />
+        <img src="https://i.postimg.cc/6qp6Lwmz/profile-image-4.png" /-->
       </div>
       <div class="wrapper">
         <div class="testimonial-container" id="testimonial-container">
@@ -360,44 +537,12 @@ background-image: var(--gradiente);
             <img src="" />
           </div>
         </div>
-        <button id="prev" onclick="prev()">&lt;</button>
-        <button id="next" onclick="next()">&gt;</button>
+        
       </div>
-      
-    </div>
-        </div>
-        
-        <div class="contact"
-        >
-        <a href="tel: 3312381872"><i class="fa fa-phone"></i></a>
-
-        <a href="https://wa.me/qr/K3HPFDZLSFINP1
-        "><i class="fa fa-whatsapp"></i></a>
-        
-        <a href="https://www.facebook.com/Digital-World-100310082725612/
-        "><i class="fa fa-facebook"></i></a>
-      <a href="https://www.instagram.com/invites/contact/?i=1qfx13l6t6gy5&utm_content=g1iuoqt
-        "><i class="fa fa-instagram" aria-hidden="true"></i>
-            
-        </a>  
-        <a href="https://youtube.com/c/FELIPEMARTINEZCOMPOSITOR
-        "><i class="fa fa-youtube"></i></a>
-        
-        
-        <a href="mailto:felipemartinez84@live.com.mx?Subject=bienvenido
-        "><i class="fa fa-envelope-open
-        "></i></a>
-        
-<a href="https://maps.app.goo.gl/4um9YVqEmjJ7LZX8A
-"><i class="fa fa-street-view
-"></i></a>
-
-
-
-        
-        
-        
-    </div>
+      <!--a href="https://youtu.be/sRJXGtM72KQ" target="_blank"
+        >My Youtube Channel</a
+      >
+    </div-->
     
     <script>
       window.addEventListener("load", function () {
@@ -409,19 +554,19 @@ background-image: var(--gradiente);
           
           image: "https://i.ibb.co/WFdxDgh/images-1.jpg",
           testimonial:
-            "PRODUCTO 1 <br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+            "<h1>PRODUCTO 1</h1>  <br /><p>         BREVE DESCRIPCION<br /> DE TU PRODUCTO</p>",
         },
         {
           
-          image: "https://i.ibb.co/3vgMwx8/images-2.jpg",
+          image: "https://i.ibb.co/6B3mBGm/images-3.jpg",
           testimonial:
-            "PRODUCTO 2<br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+            " <h1>PRODUCTO 2</h1> <br /><p>           BREVE DESCRIPCION <br /> DE TU PRODUCTO</p>",
         },
         {
           
           image: "https://i.ibb.co/M86JhM5/images.png",
           testimonial:
-            "PRODUCTO 3<br />            BREVE DESCRIPCION <br /> DE TU PRODUCTO",
+            "<h1>PRODUCTO 3</h1> <br /><p>           BREVE DESCRIPCION <br /> DE TU PRODUCTO</p>",
         },
        
       ];
@@ -450,8 +595,74 @@ background-image: var(--gradiente);
     </script>
     
     
+    
+        
+        
+        <div class="contact"
+        >
+        <a href="tel: 3312381872"><i class="fa fa-phone"></i></a>
+
+        <a href="https://wa.me/qr/K3HPFDZLSFINP1
+        "><i class="fa fa-whatsapp"></i></a>
+        
+        <a href="https://www.facebook.com/Digital-World-100310082725612/
+        "><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/invites/contact/?i=1qfx13l6t6gy5&utm_content=g1iuoqt
+        "><i class="fa fa-instagram" aria-hidden="true"></i>
+            
+        </a>  
+        
+        <a href="http://tiktok.com/@felipemartinez5483
+        "><i class="fa fa-tiktok"></i></a>
+        
+        <a href="https://youtube.com/c/FELIPEMARTINEZCOMPOSITOR
+        "><i class="fa fa-youtube"></i></a>
+        
+        
+        <a href="mailto:felipemartinez84@live.com.mx?Subject=bienvenido
+        "><i class="fa fa-envelope-open
+        "></i></a>
+        
+<a href="https://maps.app.goo.gl/4um9YVqEmjJ7LZX8A
+"><i class="fa fa-street-view
+"></i></a>
+
+
 
         
         
+        
+    </div>
+    
+    <!--audio controls>
+    <source src="
+    https://www.dropbox.com/s/8f38jxyjktta8jm/Ece%20Mumay%20-%20Yan%C4%B1ma%20Yan%C4%B1ma%20%28Extended%20Version%29%28MP3_320K%29.mp3?dl=0
+    
+    " type="audio/mpeg">
+    <source src="
+    https://dl.dropbox.com/s/8f38jxyjktta8jm/Ece%20Mumay%20-%20Yan%C4%B1ma%20Yan%C4%B1ma%20%28Extended%20Version%29%28MP3_320K%29.mp3?dl=0
+    
+    " type="audio/ogg">
+
+</audio-->
+
+<!--div class="CATALOGO">
+
+
+
+
+ <a 
+      href="https://felipe021284.github.io/CATALOGO-V1/
+      ">
+          
+      <i class="fa fa-hand-o-right
+      " aria-hidden="true"> CATALOGO</i>
+</a>
+
+</div-->
+        
+        
+    
+  
     </body>
 </html>
